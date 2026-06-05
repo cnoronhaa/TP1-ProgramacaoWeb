@@ -21,10 +21,10 @@ Depois acesse `http://localhost:8080/game/`.
 
 ## Funcionalidades
 
-- Estados de jogo: menu, seleção de mapa, jogando, pausado e fim de jogo.
-- Movimentação, colisão, vida/HP, pontuação e aumento de dificuldade por fases.
-- Cada mapa possui 10 rounds; a dificuldade aumenta a cada round e o chefão aparece no round 10.
-- Inimigos diferentes por mapa, maçã vermelha, maçã dourada e recorde com `localStorage`.
+- Estados de jogo: menu, seleção de mapa, jogando, pausado e fim de jogo;
+- Movimentação, colisão, vida/HP, pontuação e aumento de dificuldade por fases;
+- Cada mapa possui 10 rounds; a dificuldade aumenta a cada round e o chefão aparece no round 10;
+- Inimigos diferentes por mapa, maçã vermelha, maçã dourada e recorde com `localStorage;
 - Criação e remocao dinâmica de elementos na árvore DOM usando HTML, CSS e JavaScript puro.
 
 ## Integrantes
