@@ -9,13 +9,13 @@ SpitSnake é um jogo de arena em que a cobra precisa sobreviver a ondas de inimi
 - JavaScript ES6
 
 ## Estrutura
-
+```text
 game/
 ├── assets/
 ├── css/
 ├── js/
 └── index.html
-
+````
 ## Como executar
 
 Abra a pasta `game` e execute `index.html` em um navegador moderno. Se o navegador bloquear módulos JavaScript por causa do caminho local, rode um servidor estático na pasta `Programacao web`:
