@@ -40,9 +40,7 @@ export const userController = {
     }
 
     await userService.create({ fullname, email, password, majorId });
-
-    // Login/sessão ainda será implementado; por enquanto volta pra home.
-    res.redirect('/');
+    res.redirect('/login');
   }
 
 };

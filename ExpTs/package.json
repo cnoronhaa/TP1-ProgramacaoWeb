@@ -6,11 +6,13 @@
     "envalid": "^8.2.0",
     "express": "^5.2.1",
     "express-handlebars": "^8.0.2",
+    "express-session": "^1.19.0",
     "lorem-ipsum": "^3.0.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.6",
+    "@types/express-session": "^1.19.0",
     "@types/handlebars": "^4.0.40",
     "@types/node": "^26.0.0",
     "nodemon": "^3.1.14",

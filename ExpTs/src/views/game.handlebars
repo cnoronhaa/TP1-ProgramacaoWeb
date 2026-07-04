@@ -1,0 +1,88 @@
+<main id="app" class="app">
+  <section id="screen-menu" class="screen screen-menu is-active" aria-label="Menu inicial">
+    <div class="menu-actions">
+      <button id="btn-play" class="primary-action" type="button">Jogar</button>
+      <button id="btn-settings" type="button">Configurações</button>
+    </div>
+  </section>
+
+  <section id="screen-maps" class="screen screen-panel" aria-label="Seleção de mapa">
+    <header class="panel-header">
+      <div class="panel-title">
+        <button id="btn-back-menu" class="icon-button" type="button" aria-label="Voltar">&lt;</button>
+        <h1>Escolha o mapa</h1>
+      </div>
+      <div class="record-box">
+        <span>Recorde</span>
+        <strong id="map-high-score">0</strong>
+      </div>
+    </header>
+    <div id="map-list" class="map-list"></div>
+  </section>
+
+  <section id="screen-game" class="screen screen-game" aria-label="Jogo">
+    <div id="hud" class="hud">
+      <span>Mapa <strong id="hud-map">Selva</strong></span>
+      <span>Fase <strong id="hud-round">1</strong></span>
+      <span>Pontos <strong id="hud-score">0</strong></span>
+      <span>Recorde <strong id="hud-high-score">0</strong></span>
+      <span class="hp-wrap">HP <strong id="hud-hp">100</strong></span>
+    </div>
+    <aside id="player-info" class="player-info" aria-label="Informações do jogador">
+      <h2 id="player-info-title">Player</h2>
+      <p><span id="player-max-hp-label">Vida máx.</span><strong id="player-max-hp">100</strong></p>
+      <p><span id="player-power-label">Poder</span><strong id="player-power">1</strong></p>
+      <p><span id="player-damage-label">Dano</span><strong id="player-damage">24</strong></p>
+      <p><span id="player-effects-label">Efeitos</span><strong id="player-effects">Nenhum</strong></p>
+    </aside>
+    <div id="arena" class="arena" tabindex="0" aria-label="Arena do SpitSnake"></div>
+    <div class="touch-actions">
+      <button id="btn-touch-shoot" type="button">Cuspir</button>
+      <button id="btn-touch-pause" type="button">Pausar</button>
+    </div>
+  </section>
+
+  <section id="screen-paused" class="screen screen-overlay" aria-label="Jogo pausado">
+    <div class="dialog">
+      <h1>Pausado</h1>
+      <button id="btn-resume" class="primary-action" type="button">Continuar</button>
+      <button id="btn-restart-paused" type="button">Reiniciar</button>
+      <button id="btn-maps-paused" type="button">Mapas</button>
+      <button id="btn-settings-paused" type="button">Configurações</button>
+      <button id="btn-menu-paused" type="button">Menu</button>
+    </div>
+  </section>
+
+  <section id="screen-settings" class="screen screen-overlay" aria-label="Configurações">
+    <div class="dialog settings-dialog">
+      <h1 id="settings-title">Configurações</h1>
+      <label class="setting-row" for="language-select">
+        <span id="language-label">Idioma</span>
+        <select id="language-select">
+          <option value="ptBr">PT-BR</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+      <label class="setting-row" for="volume-range">
+        <span id="volume-label">Volume <strong id="volume-value">45%</strong></span>
+        <input id="volume-range" type="range" min="0" max="100" step="1" value="45">
+      </label>
+      <button id="btn-back-settings" class="primary-action" type="button">Voltar</button>
+    </div>
+  </section>
+
+  <section id="screen-game-over" class="screen screen-overlay" aria-label="Fim de jogo">
+    <div class="dialog">
+      <h1 id="game-over-title">Game Over</h1>
+      <p id="game-over-message">Sua cobra foi derrotada.</p>
+      <div class="final-score">
+        <span>Pontuação</span>
+        <strong id="final-score">0</strong>
+      </div>
+      <button id="btn-next-map" class="primary-action" type="button" hidden>Próximo mapa</button>
+      <button id="btn-restart" class="primary-action" type="button">Jogar novamente</button>
+      <button id="btn-maps-game-over" type="button">Mapas</button>
+      <button id="btn-menu-game-over" type="button">Menu</button>
+    </div>
+  </section>
+</main>

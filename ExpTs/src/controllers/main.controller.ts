@@ -4,7 +4,19 @@ import { loremIpsum } from 'lorem-ipsum';
 export const mainController = {
 
   home(req: Request, res: Response) {
-    res.send('Servidor funcionando!');
+    if (res.locals.isLoggedIn) {
+      res.render('game', {
+        title: 'SpitSnake - Jogar',
+        baseHref: '/game/',
+        extraCss: '/game/css/styles.css',
+        extraScript: '/game/js/main.js'
+      });
+      return;
+    }
+
+    res.render('home', {
+      title: 'SpitSnake'
+    });
   },
 
   about(req: Request, res: Response) {
@@ -42,7 +54,7 @@ export const mainController = {
   hb2(req: Request, res: Response) {
     res.render('hb2', {
       title: 'HB2 - If',
-      isLoggedIn: true   // troque pra false e teste de novo, pra ver o #else
+      isLoggedIn: true
     });
   },
 

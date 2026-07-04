@@ -5,5 +5,6 @@ export function validateEnv() {
     PORT: port({ default: 3000 }),
     LOGS_PATH: str(),
     DATABASE_URL: url(),
+    SESSION_SECRET: str(),
   });
 }
