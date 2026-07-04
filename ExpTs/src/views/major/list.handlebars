@@ -1,0 +1,34 @@
+<h1>Cursos</h1>
+
+<a href="/major/create">Novo Curso</a>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Sigla</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each majors}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.code}}</td>
+      <td>
+        <button type="button" class="btn-delete-major" data-id="{{this.id}}">Excluir</button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<div id="delete-modal" class="modal-overlay">
+  <div class="modal-box">
+    <p>Tem certeza que deseja excluir este curso?</p>
+    <button id="confirm-delete" type="button">Sim, excluir</button>
+    <button id="cancel-delete" type="button">Cancelar</button>
+  </div>
+</div>
+
+<script src="/js/major.js"></script>

@@ -1,0 +1,20 @@
+<h1>Criação de Curso</h1>
+
+<form method="POST" action="/major/create">
+  <div>
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div>
+    <label for="code">Sigla</label><br>
+    <input type="text" id="code" name="code" maxlength="4" required>
+  </div>
+
+  <div>
+    <label for="description">Descrição</label><br>
+    <textarea id="description" name="description" required></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>

@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.2",
     "envalid": "^8.2.0",
     "express": "^5.2.1",
@@ -7,10 +9,13 @@
     "lorem-ipsum": "^3.0.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.6",
     "@types/handlebars": "^4.0.40",
     "@types/node": "^26.0.0",
     "nodemon": "^3.1.14",
+    "prisma": "^6.19.3",
+    "sass": "^1.101.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   },
@@ -18,7 +23,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm run sass",
     "start": "nodemon",
+    "sass": "sass src/scss/styles.scss public/css/styles.css",
+    "sass:watch": "sass --watch src/scss/styles.scss public/css/styles.css",
+    "predeploy": "npm run sass",
     "deploy": "tsc",
     "start:prod": "node build/index.js"
   },

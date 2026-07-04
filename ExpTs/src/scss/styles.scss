@@ -1,0 +1,43 @@
+$color-primary: #2e7d5b;   
+$color-text: #222;
+$color-bg: #fafafa;
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// Estilo específico da página /hb1 (exercício #11)
+.hb1-title {
+  color: $color-primary;
+  font-weight: bold;
+}
+
+// Modal de confirmação de exclusão (exercício #14)
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.is-visible {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  min-width: 280px;
+  text-align: center;
+
+  button {
+    margin: 8px 4px 0;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+}

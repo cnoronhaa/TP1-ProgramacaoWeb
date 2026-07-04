@@ -13,10 +13,14 @@ validateEnv();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use(logger('completo'));
 
 app.engine('handlebars', engine({
-  defaultLayout: false,
+  defaultLayout: 'main',
+  layoutsDir: path.join(__dirname, 'views', 'layouts'),
   helpers: {
     listaPoweredByNodejs: (technologies: { name: string; type: string; poweredByNodejs: boolean }[]) => {
       const filtradas = technologies.filter((tech) => tech.poweredByNodejs);

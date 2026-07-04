@@ -1,0 +1,38 @@
+body {
+  background-color: #fafafa;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hb1-title {
+  color: #2e7d5b;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.is-visible {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  min-width: 280px;
+  text-align: center;
+}
+.modal-box button {
+  margin: 8px 4px 0;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

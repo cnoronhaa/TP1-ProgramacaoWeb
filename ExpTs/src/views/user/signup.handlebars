@@ -1,0 +1,39 @@
+<h1>Criar Conta</h1>
+
+{{#if error}}
+<p style="color:red;">{{error}}</p>
+{{/if}}
+
+<form method="POST" action="/signup">
+  <div>
+    <label for="fullname">Nome completo</label><br>
+    <input type="text" id="fullname" name="fullname" value="{{fullname}}" required>
+  </div>
+
+  <div>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" value="{{email}}" required>
+  </div>
+
+  <div>
+    <label for="password">Senha</label><br>
+    <input type="password" id="password" name="password" required minlength="6">
+  </div>
+
+  <div>
+    <label for="confirmPassword">Repetir senha</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword" required minlength="6">
+  </div>
+
+  <div>
+    <label for="majorId">Curso</label><br>
+    <select id="majorId" name="majorId" required>
+      <option value="">Selecione...</option>
+      {{#each majors}}
+      <option value="{{this.id}}">{{this.name}} ({{this.code}})</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <button type="submit">Cadastrar</button>
+</form>
